@@ -1,0 +1,424 @@
+
+/*****GENERAL*****/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+/*****CONTENEDOR*****/
+
+
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 1fr 1fr 10fr 1fr;
+    grid-template-areas: 
+    "menu-principal"
+    "selector"
+    "principal"
+    "pie"
+    ;
+    color: black;
+    height: 100vh;
+}
+
+/*****MENU*****/
+
+
+menu {
+    grid-area: menu-principal;
+    background-color:#00579c;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lateral {
+    display: none;
+}
+
+.orden {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.orden {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 10px;
+    gap: 10px;
+    color: white;
+    
+}
+
+.orden h4 {
+    font-size: 20px ;
+    color: white;
+}
+
+.orden p span {
+    font-size: 30px;
+    color: white;
+    padding-left: 20px;
+    border: 0;
+}
+
+.barra p {
+    margin-right: 10px;
+    color: white;
+    font-size: 30px;
+}
+
+.barra p span {
+    font-size: 30px;
+    color: white;
+    padding-right: 10px;
+}
+
+
+
+
+/*****SELECTOR*****/
+
+
+
+.selector {
+    background-color: #e2e2e2;
+    grid-area: selector;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.selector .rectangulo {
+    width: 300px;
+    border-radius: 5px;
+    padding: 15px 15px;
+}
+
+.centrado {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.centrado p {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+
+/*****MAIN*****/
+
+
+main {
+    grid-area: principal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border: 1px solid grey;
+    margin-top: 30px;
+    border-radius: 2%;
+    
+}
+
+.box {
+    max-width: 450px;
+    height: 100%;
+    padding: 10px;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+}
+
+h4 {
+    color: grey;
+}
+
+button {
+    background-color: #00579c;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: 0;
+}
+
+
+.numeros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numeros .item, span{
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 15px;
+    width: 50px;
+    height: 50px;
+    color: #00579c;
+    font-size: 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+/*****FOOTER*****/
+
+
+footer {
+    grid-area: pie;
+    background-color:#002f6c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+    margin-top: auto;
+}
+
+footer .redes i {
+    color: white;
+}
+
+footer .pie {
+    padding-bottom: 20px;
+    color: white;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+@media (min-width : 576px){
+    .container {
+        grid-template-columns: 25% 1fr 1fr;
+        grid-template-rows: 1fr 6fr 1fr ;
+        grid-template-areas: 
+        "menu-principal menu-principal menu-principal"
+        "selector principal principal"
+        "pie pie pie" ;
+        color: black;
+        height: 100vh;
+    }
+
+    menu {
+        grid-area: menu-principal;
+        background-color:#00579c;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    section.menu-lateral ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-right: 50px;
+        
+    }
+
+    section.menu-lateral ul li {
+        list-style: none;
+        color: white;
+        padding-right: 40px;
+    }
+
+    .barra {
+        display: none;
+    }
+
+    .menu-lateral .lateral {
+        display: flex;
+    }
+
+    .selector {
+        background-color: #e2e2e2;
+        grid-area: selector;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .selector .rectangulo {
+        width: 100px;
+        border-radius: 5px;
+        padding: 15px 15px;
+    }
+    
+    main {
+        grid-area: principal;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-left: 30px;
+        gap: 30px;
+        margin: 0 auto;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        border: 1px solid grey;
+        border-radius: 2%;
+        
+    }
+    
+    .box {
+        
+        height: 100%;
+        padding: 10px;
+    }
+    
+    .box img {
+        width: 100%;
+        height: 100%;
+        object-fit:contain;
+    }
+
+    .numeros {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    footer {
+        padding: 25px;
+        height: auto;
+    }
+}
+
+@media (min-width : 992px){
+    .container {
+        grid-template-columns: 25% 3fr;
+        grid-template-rows: 1fr 6fr 1fr ;
+        grid-template-areas: 
+        "menu-principal selector"
+        "menu-principal principal"
+        "pie principal" ;
+        color: black;
+        height: auto;
+    }
+
+    menu {
+        grid-area: menu-principal;
+        background-color:#00579c;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start; 
+        align-items: center;
+        gap: 10px;
+    }
+
+    .orden {
+        margin-right: 50px;
+    }
+
+    .barra {
+        display: none;
+    }
+
+    .lateral {
+        margin-left: 80px;
+    }
+
+    section.menu-lateral ul {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+    }
+
+    .selector .rectangulo {
+        width: 600px;
+        border-radius: 5px;
+        padding: 15px 15px;
+    }
+    
+    .centrado {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .centrado p {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    
+    main {
+        grid-area: principal;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-left: 30px;
+        gap: 30px;
+        margin: 0 auto;
+        padding-top: 0;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        border: 1px solid grey;
+        border-radius: 2%;
+        
+    }
+
+    .numeros {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    footer {
+        padding: 25px;
+        height: auto;
+    }
+}
